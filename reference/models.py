@@ -11,8 +11,8 @@ class ReferenceType(models.Model):
         return f"{self.title}"
 
     class Meta:
-        verbose_name = 'Анықтама түрі'
-        verbose_name_plural = 'Анықтама түрлері'
+        verbose_name = 'Тип справки'
+        verbose_name_plural = 'Типы справки'
 
 
 class Reference(models.Model):
@@ -36,6 +36,6 @@ class Reference(models.Model):
         return f" {self.student}"
 
     class Meta:
-        verbose_name = 'Анықтама'
-        verbose_name_plural = 'Анықтамалар'
+        verbose_name = 'Справка'
+        verbose_name_plural = 'Справки'
 

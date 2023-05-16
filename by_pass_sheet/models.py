@@ -12,8 +12,8 @@ class BypassSheet(models.Model):
 
 
     class Meta:
-        verbose_name = 'Алаушы тізімі'
-        verbose_name_plural = 'Алаушы тізімдер'
+        verbose_name = 'Обходной лист'
+        verbose_name_plural = 'Обходные листы'
 
 class BypassSheetField(models.Model):
     name = models.CharField(max_length=100)

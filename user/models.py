@@ -85,5 +85,5 @@ class User(AbstractBaseUser):
         return self.role == User.ROLES.STUDENT
 
     class Meta:
-        verbose_name = 'Пайдаланушы'
-        verbose_name_plural = 'Пайдаланушылар'
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
