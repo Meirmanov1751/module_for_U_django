@@ -29,18 +29,14 @@ def base(request):
     return render(request, 'base.html')
 
 from by_pass_sheet.urls import router as by_pass_sheet_router
-from employee.urls import router as employee_router
 from reference.urls import router as reference_router
-from student.urls import router as student_router
 
 from two_factor.urls import urlpatterns as tf_urls
 
 router = DefaultRouter()
 
 router.registry.extend(by_pass_sheet_router.registry)
-router.registry.extend(employee_router.registry)
 router.registry.extend(reference_router.registry)
-router.registry.extend(student_router.registry)
 
 urlpatterns = [
     path('', base),

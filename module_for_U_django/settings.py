@@ -60,9 +60,7 @@ INSTALLED_APPS = [
     'two_factor',
     'user',
     'by_pass_sheet',
-    'employee',
     'reference',
-    'student'
 ]
 
 MIDDLEWARE = [

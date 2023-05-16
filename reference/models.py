@@ -1,6 +1,5 @@
 from django.db import models
 
-from student.models import Student
 from user.models import User
 
 class ReferenceType(models.Model):
@@ -10,6 +9,10 @@ class ReferenceType(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+    class Meta:
+        verbose_name = 'Анықтама түрі'
+        verbose_name_plural = 'Анықтама түрлері'
 
 
 class Reference(models.Model):
@@ -32,4 +35,7 @@ class Reference(models.Model):
     def __str__(self):
         return f" {self.student}"
 
+    class Meta:
+        verbose_name = 'Анықтама'
+        verbose_name_plural = 'Анықтамалар'
 
