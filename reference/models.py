@@ -24,7 +24,7 @@ class Reference(models.Model):
 
     student = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    info = models.TextField()
+    info = models.TextField(null=True, blank=True)
     status = models.CharField(max_length=100, choices=STATUS_CHOICES, default='pending', null=True, blank=True)
     reference_type = models.ForeignKey(
         ReferenceType,

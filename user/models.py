@@ -46,6 +46,10 @@ class User(AbstractBaseUser):
 
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    birthday = models.DateField(null=True, blank=True)  # Optional field
+    group = models.CharField(max_length=100, null=True, blank=True)  # Optional field
+    specialty = models.CharField(max_length=100, null=True, blank=True)  # Non-required field
+
     email = models.EmailField(unique=True)
     role = models.CharField(max_length=20, choices=ROLES.ROLES_CHOICES,
                             default=ROLES.STUDENT)
@@ -55,7 +59,7 @@ class User(AbstractBaseUser):
     is_superuser = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['role', 'first_name', 'last_name']
+    REQUIRED_FIELDS = ['role', 'first_name', 'last_name', 'birthday', 'group', 'specialty']
 
     objects = UserManager()
 
